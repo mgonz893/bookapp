@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (isset($_POST['submit'])) {
     try {
         require "config.php";
@@ -30,8 +31,12 @@ if (isset($_POST['submit'])) {
     if ($result && $statement->rowCount() > 0) { ?>
 
         <body> Login Successful </body>
+        <?php $_SESSION["username"] = $nickname;
+        $_SESSION["logged"] = true;
+        ?>
     <?php } else { ?>
         > Login Unsuccessful for <?php echo escape($_POST['nickname']); ?>.
+
 <?php }
 } ?>
 <h2>Login</h2>

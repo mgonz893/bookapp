@@ -1,3 +1,15 @@
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+if (isset($_SESSION['logged'])) {
+    echo $_SESSION["username"];
+    echo '<a href="logout.php"><span>Logout</span></a></li>';
+} else {
+    echo '<a href="index.php"><span>Login/Register</span></a></li>';
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +24,7 @@
 </head>
 
 <body>
-    <h1>Book Store</h1>
+    <p>Book Store</p>
 </body>
 
 </html>
