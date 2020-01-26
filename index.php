@@ -7,6 +7,9 @@
     <li>
         <a href="login.php"><strong>Login</strong></a> - existing user
     </li>
+    <li>
+        <a href="search.php"><strong>Search Bookstore</strong></a> - search for books, authors, genre, etc.
+    </li>
 </ul>
 
 <?php include "footer.php"; ?>
